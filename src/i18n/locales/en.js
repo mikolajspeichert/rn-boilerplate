@@ -1,3 +1,7 @@
 export default {
-  hello_world: 'Hello world!',
+  home: {
+    hello: 'Hello!',
+    welcome: 'Welcome on',
+    more: 'More',
+  },
 }

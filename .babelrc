@@ -1,28 +1,3 @@
 {
-  "presets": [
-    [
-      "env",
-      {
-        "targets": {
-          "node": "current"
-        }
-      }
-    ],
-    "stage-0",
-    "react",
-    "react-native"
-  ],
-  "env": {
-    "test": {
-      "presets": [
-        "env",
-        "stage-0",
-        "react",
-        "react-native"
-      ]
-    }
-  },
-  "ignore": [
-    "/node_modules/^((?!react).)*$",
-  ]
+  "presets": ["react-native"],
 }
