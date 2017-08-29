@@ -1,0 +1,36 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Main reducer reduces initial state 1`] = `
+Object {
+  "nav": Object {
+    "index": 0,
+    "routes": Array [
+      Object {
+        "key": "Init-id-1504022106489-0",
+        "routeName": "Home",
+        "type": undefined,
+      },
+    ],
+  },
+}
+`;
+
+exports[`Main reducer reduces navigation 1`] = `
+Object {
+  "nav": Object {
+    "index": 1,
+    "routes": Array [
+      Object {
+        "key": "Init-id-1504022106489-0",
+        "routeName": "Home",
+        "type": undefined,
+      },
+      Object {
+        "key": "id-1504022106489-1",
+        "params": undefined,
+        "routeName": "More",
+      },
+    ],
+  },
+}
+`;

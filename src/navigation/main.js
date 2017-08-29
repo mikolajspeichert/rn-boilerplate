@@ -3,13 +3,15 @@ import { connect } from 'react-redux'
 import { addNavigationHelpers, StackNavigator } from 'react-navigation'
 
 import HomeScreen from '@scenes/Home'
+import MoreScreen from '@scenes/More'
 
-export const MainNavigator = StackNavigator({
+export const Navigator = StackNavigator({
   Home: { screen: HomeScreen },
+  More: { screen: MoreScreen },
 })
 
 const Nav = ({ dispatch, nav }) =>
-  <MainNavigator navigation={addNavigationHelpers({ dispatch, state: nav })} />
+  <Navigator navigation={addNavigationHelpers({ dispatch, state: nav })} />
 
 const mapStateToProps = state => ({
   nav: state.nav,

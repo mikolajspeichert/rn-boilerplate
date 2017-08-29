@@ -1,27 +1,32 @@
 import React, { Component } from 'react'
 import { View, Text, Platform } from 'react-native'
+import { connect } from 'react-redux'
 import SpecialButton from '@reusable/SpecialButton'
 import styles from './styles'
 import I18n from '@i18n'
 
 class HomeScreen extends Component {
   static navigationOptions = {
-    title: I18n.t('hello'),
+    title: I18n.t('home.hello'),
   }
+
   render() {
-    const { navigate } = this.props.navigation
     return (
-      <View styles={styles.home}>
+      <View style={styles.home}>
         <Text>
-          {I18n.t('welcome')} {Platform.OS === 'ios' ? 'iOS' : 'Android'}
+          {I18n.t('home.welcome')} {Platform.OS === 'ios' ? 'iOS' : 'Android'}
         </Text>
         <SpecialButton
-          title={I18n.t('more')}
-          onPress={() => navigate('Chat')}
+          title={I18n.t('home.more')}
+          onPress={() => this.props.goToMore()}
         />
       </View>
     )
   }
 }
 
-export default HomeScreen
+const mapDispatchToProps = dispatch => ({
+  goToMore: () => dispatch({ type: 'More' }),
+})
+
+export default connect(null, mapDispatchToProps)(HomeScreen)

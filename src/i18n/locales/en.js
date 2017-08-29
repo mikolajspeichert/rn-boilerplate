@@ -4,4 +4,8 @@ export default {
     welcome: 'Welcome on',
     more: 'More',
   },
+  more: {
+    more: 'Welcome to more',
+    welcome: 'Heyyyyyyyyyyy',
+  },
 }

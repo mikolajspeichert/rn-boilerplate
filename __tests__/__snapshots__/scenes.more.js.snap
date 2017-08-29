@@ -1,0 +1,20 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Mome Screen renders correctly 1`] = `
+<View
+  style={
+    Object {
+      "backgroundColor": "#c764cc",
+    }
+  }
+>
+  <Text
+    accessible={true}
+    allowFontScaling={true}
+    disabled={false}
+    ellipsizeMode="tail"
+  >
+    [missing "en.more.welcome" translation]
+  </Text>
+</View>
+`;

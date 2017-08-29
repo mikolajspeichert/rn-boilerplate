@@ -1,26 +1,27 @@
 import { combineReducers } from 'redux'
 import { NavigationActions } from 'react-navigation'
-import { MainNavigator } from '@navigation/MainNavigator'
+import { Navigator } from '@navigation/main'
 // import { home } from ''
 
-const initialState = MainNavigator.router.getActionForPathAndParams('Home')
+const initialState = Navigator.router.getStateForAction(
+  Navigator.router.getActionForPathAndParams('Home')
+)
 
 const nav = (state = initialState, action) => {
-  let nextState
   switch (action.type) {
     case 'More':
-      nextState = MainNavigator.router.getStateForAction(
+      return Navigator.router.getStateForAction(
         NavigationActions.navigate({ routeName: 'More' }),
         state
       )
-      break
     default:
-      nextState = MainNavigator.router.getStateForAction(state, action)
+      return Navigator.router.getStateForAction(action, state)
   }
-  return nextState || state
 }
 
-export default nav
+export default combineReducers({
+  nav,
+})
 // export default combineReducers({
 //   home,
 //   nav,
