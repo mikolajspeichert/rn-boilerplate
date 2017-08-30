@@ -44,7 +44,6 @@
     },
     "collectCoverage": true,
     "coverageDirectory": "__tests__/__coverage__",
-    "coveragePathIgnorePatterns": ["/node_modules/", "/src/store/store.js"],
     "transformIgnorePatterns": [
       "node_modules/(?!(jest-)?react-native|react-navigation)"
     ],
@@ -53,7 +52,8 @@
     ],
     "testPathIgnorePatterns": [
       "/node_modules/",
-      "/__tests__/__config__/"
+      "/__tests__/__config__/",
+      "/__tests__/__coverage__"
     ]
   }
 }

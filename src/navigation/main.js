@@ -10,11 +10,15 @@ export const Navigator = StackNavigator({
   More: { screen: MoreScreen },
 })
 
-const Nav = ({ dispatch, nav }) =>
+const Nav = ({ dispatch, nav }) => (
   <Navigator navigation={addNavigationHelpers({ dispatch, state: nav })} />
+)
 
-const mapStateToProps = state => ({
-  nav: state.nav,
-})
+const mapStateToProps = state => {
+  console.log(state)
+  return {
+    nav: state.nav,
+  }
+}
 
 export default connect(mapStateToProps)(Nav)

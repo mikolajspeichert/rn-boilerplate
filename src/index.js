@@ -4,7 +4,7 @@ import { AppRegistry } from 'react-native'
 import store from '@store/store'
 import Navigator from '@navigation/main'
 
-class App extends Component {
+export class App extends Component {
   render() {
     return (
       <Provider store={store()}>
