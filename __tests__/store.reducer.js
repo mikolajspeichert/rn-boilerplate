@@ -6,10 +6,10 @@ describe('Main reducer', () => {
   })
 
   it('reduces navigation', () => {
-    let effect = reducer({}, { type: 'More' }).nav
+    let effect = reducer({}, { type: 'Add' }).nav
     expect(effect.index).toBe(1)
     expect(
-      effect.routes.filter(route => route.routeName === 'More')
+      effect.routes.filter(route => route.routeName === 'Add')
     ).toHaveLength(1)
   })
 })

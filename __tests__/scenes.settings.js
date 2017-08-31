@@ -3,14 +3,14 @@ import React from 'react'
 import configureStore from 'redux-mock-store'
 import renderer from 'react-test-renderer'
 // import { shallow } from 'enzyme'
-import MoreScreen from '@scenes/More'
+import SettingsScreen from '@scenes/Settings'
 
 const state = {}
 const mockStore = configureStore()
 
-describe('Mome Screen', () => {
+describe('SettingsScreen', () => {
   it('renders correctly', () => {
-    const wrapper = renderer.create(<MoreScreen store={mockStore(state)} />)
+    const wrapper = renderer.create(<SettingsScreen store={mockStore(state)} />)
     expect(wrapper).toMatchSnapshot()
   })
 })

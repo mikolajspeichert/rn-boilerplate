@@ -1,21 +1,41 @@
 import React from 'react'
 import { connect } from 'react-redux'
-import { addNavigationHelpers, StackNavigator } from 'react-navigation'
+import {
+  addNavigationHelpers,
+  TabNavigator,
+  TabBarBottom,
+} from 'react-navigation'
 
 import HomeScreen from '@scenes/Home'
-import MoreScreen from '@scenes/More'
+import AddScreen from '@scenes/Add'
+import SettingsScreen from '@scenes/Settings'
 
-export const Navigator = StackNavigator({
-  Home: { screen: HomeScreen },
-  More: { screen: MoreScreen },
-})
+export const Navigator = TabNavigator(
+  {
+    Home: { screen: HomeScreen },
+    Add: { screen: AddScreen },
+    Settings: { screen: SettingsScreen },
+  },
+  {
+    tabBarComponent: TabBarBottom,
+    tabBarPosition: 'bottom',
+    animationEnabled: true,
+    lazy: false,
+    tabBarOptions: {
+      activeBackgroundColor: '#3c3c3c',
+      inactiveBackgroundColor: '#505050',
+      showLabel: false,
+      activeTintColor: '#fafafa',
+      inactiveTintColor: '#fafafa',
+    },
+  }
+)
 
 const Nav = ({ dispatch, nav }) => (
   <Navigator navigation={addNavigationHelpers({ dispatch, state: nav })} />
 )
 
 const mapStateToProps = state => {
-  console.log(state)
   return {
     nav: state.nav,
   }

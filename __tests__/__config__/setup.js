@@ -7,3 +7,6 @@ jest.mock('react-native-i18n', () => {
     t: jest.fn((k, o) => i18njs.t(k, o)),
   }
 })
+
+jest.mock('@assets/icons', () => jest.fn())
+jest.mock('ScrollView', () => jest.genMockFromModule('ScrollView'))

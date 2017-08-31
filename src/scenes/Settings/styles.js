@@ -1,8 +1,8 @@
 import { StyleSheet } from 'react-native'
 
 export default StyleSheet.create({
-  home: {
-    backgroundColor: '#fafafa',
+  settings: {
+    backgroundColor: '#949494',
   },
   icon: {
     height: 26,

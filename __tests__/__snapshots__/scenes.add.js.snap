@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Mome Screen renders correctly 1`] = `
+exports[`AddScreen renders correctly 1`] = `
 <View
   style={
     Object {
@@ -14,7 +14,7 @@ exports[`Mome Screen renders correctly 1`] = `
     disabled={false}
     ellipsizeMode="tail"
   >
-    [missing "en.more.welcome" translation]
+    [missing "en.add.welcome" translation]
   </Text>
 </View>
 `;

@@ -1,0 +1,20 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SettingsScreen renders correctly 1`] = `
+<View
+  style={
+    Object {
+      "backgroundColor": "#949494",
+    }
+  }
+>
+  <Text
+    accessible={true}
+    allowFontScaling={true}
+    disabled={false}
+    ellipsizeMode="tail"
+  >
+    [missing "en.settings.placeholder" translation]
+  </Text>
+</View>
+`;

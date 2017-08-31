@@ -4,8 +4,12 @@ export default {
     welcome: 'Welcome on',
     more: 'More',
   },
-  more: {
+  add: {
     more: 'Welcome to more',
     welcome: 'Heyyyyyyyyyyy',
+  },
+  settings: {
+    title: 'Settings',
+    placeholder: 'Lorem ipsum',
   },
 }

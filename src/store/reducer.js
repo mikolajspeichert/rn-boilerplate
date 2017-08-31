@@ -9,9 +9,9 @@ const initialState = Navigator.router.getStateForAction(
 
 const nav = (state = initialState, action) => {
   switch (action.type) {
-    case 'More':
+    case 'Add':
       return Navigator.router.getStateForAction(
-        NavigationActions.navigate({ routeName: 'More' }),
+        NavigationActions.navigate({ routeName: 'Add' }),
         state
       )
     default:
