@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { Provider } from 'react-redux'
 import { AppRegistry } from 'react-native'
-import store from '@store/store'
+import store from '@store'
 import Navigator from '@navigation/main'
 
 export class App extends Component {

@@ -5,6 +5,7 @@ exports[`AddScreen renders correctly 1`] = `
   style={
     Object {
       "backgroundColor": "#c764cc",
+      "flex": 1,
     }
   }
 >

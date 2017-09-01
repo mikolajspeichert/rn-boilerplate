@@ -78,3 +78,5 @@ exports[`Home Screen renders correctly 1`] = `
   </View>
 </View>
 `;
+
+exports[`Home reducer reduces initial state 1`] = `undefined`;
