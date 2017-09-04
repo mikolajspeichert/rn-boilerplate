@@ -41,5 +41,8 @@ buck-out/
 \.buckd/
 *.keystore
 
-# Tests coverage
+# Tests
 __tests__/__coverage__
+*.realm.*
+*.realm
+realm*

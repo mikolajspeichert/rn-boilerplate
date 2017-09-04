@@ -4,8 +4,8 @@ import configureStore from 'redux-mock-store'
 import renderer from 'react-test-renderer'
 import sinon from 'sinon'
 import HomeScreen from '@scenes/Home'
-import reducer from '@scenes/Home/reducer'
-import {loadItems } from '@scenes/Home/actions'
+import { loadItems } from '@scenes/Home/actions'
+import storage from '@storage'
 
 const state = {}
 const mockStore = configureStore()
@@ -21,19 +21,39 @@ describe('Home Screen', () => {
   })
 })
 
-describe('Home reducer', () => {
-  it('reduces initial state', () => {
-    expect(reducer({}, { type: 'None' }).home).toMatchSnapshot()
+describe('Home action', () => {
+  beforeEach(async () => {
+    let realm = await storage
+    realm.write(() => {
+      realm.create('Item', {
+        id: 'first',
+        title: 'FIRST_ITEM',
+        notes: 'No notes on this one',
+        created: new Date(1),
+      })
+      realm.create('Item', {
+        id: 'second',
+        title: 'Second item',
+        notes: 'Some notes',
+        created: new Date(100),
+      })
+    })
   })
-})
 
-describe('Home actions', () => {
-  beforeEach(() => {
-    console.log('Initializing realm')
+  afterEach(async () => {
+    let realm = await storage
+    realm.write(() => {
+      realm.delete(realm.objects('Item'))
+    })
+
+    realm.close()
   })
 
-  it('load items correctly', async () => {
-    const items = await loadItems()
-    expect(items).toMatchSnapshot()
+  it('loads items correctly', done => {
+    const fakeDispatch = action => {
+      expect(action).toMatchSnapshot()
+      done()
+    }
+    loadItems()(fakeDispatch)
   })
 })

@@ -1,6 +1,4 @@
-import { Object } from 'realm'
-
-export default class Item extends Object {
+export default class Item {
   static schema = {
     name: 'Item',
     primaryKey: 'id',

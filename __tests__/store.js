@@ -1,5 +1,6 @@
 import store from '@store'
 import reducer from '@store/reducer'
+import { actions } from '@scenes/Home/actions'
 
 describe('Store', () => {
   it('creates correctly', () => {
@@ -18,5 +19,30 @@ describe('Main reducer', () => {
     expect(
       state.routes.filter(route => route.routeName === 'Add')
     ).toHaveLength(1)
+  })
+})
+
+describe('Home reducer', () => {
+  it('reduces initial state', () => {
+    expect(reducer({}, { type: 'None' })).toMatchSnapshot()
+  })
+
+  it('reduces item loading', () => {
+    expect(
+      reducer(
+        {},
+        {
+          type: actions.LOAD_ITEMS,
+          value: {
+            '0': {
+              id: 'item',
+              title: 'ITEM',
+              notes: 'item notes',
+              created: new Date(999),
+            },
+          },
+        }
+      ).home
+    ).toMatchSnapshot()
   })
 })
