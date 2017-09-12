@@ -1,5 +1,5 @@
-### React Native simple boilerplate
-This boilerplate is a very simple piece of code with all crucial dependencies installed. Based on `react-native init`.
+### React Native  boilerplate
+Welcome to my boilerplate - small piece of React Native code with dependencies I consider important installed. Based on `react-native init`.
 
 Dependencies:
 
@@ -20,6 +20,6 @@ Dependencies:
 4. Run tests using `npm run test`
 5. To run on device emulators, you have to have installed `react-native` npm module, then run `react-native run-ios` or `react-native run-android`. See more on [React Native getting started](https://facebook.github.io/react-native/docs/getting-started.html).
 
-> This project is still in development, please inform about any current issues
+> This project is still in development, please inform about any issues
 
 > As soon as react 16.0.0 reaches rc/stable version, tests will be upgraded to [enzyme](https://github.com/airbnb/enzyme)
