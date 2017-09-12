@@ -1,5 +1,5 @@
 ### React Native  boilerplate
-Welcome to my boilerplate - small piece of React Native code with dependencies I consider important installed. Based on `react-native init`.
+React Native boilerplate - small piece of code with dependencies I consider important installed. Based on `react-native init`.
 
 Dependencies:
 
