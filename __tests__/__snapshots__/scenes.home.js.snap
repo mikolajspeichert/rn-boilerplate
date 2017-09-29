@@ -21,6 +21,16 @@ exports[`Home Screen renders correctly 1`] = `
 </View>
 `;
 
+exports[`Home action adds item correctly 1`] = `
+Object {
+  "type": "TRY_ADD_ITEM",
+  "value": Object {
+    "id": "mock",
+    "title": "mock",
+  },
+}
+`;
+
 exports[`Home action loads items correctly 1`] = `
 Object {
   "type": "LOAD_ITEMS",

@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
-import { View, Text, Image, Platform } from 'react-native'
+import { View, Text, Image, Platform, Button } from 'react-native'
 import { connect } from 'react-redux'
+import { createDefaultNotification } from '@services/notification'
 import icons from '@assets/icons'
 import styles from './styles'
 import { loadItems } from './actions'
@@ -22,8 +23,14 @@ class HomeScreen extends Component {
         <Text>
           {I18n.t('home.welcome')} {Platform.OS === 'ios' ? 'iOS' : 'Android'}
         </Text>
+        <Button onPress={() => createDefaultNotification()} title="Notify" />
       </View>
     )
+  }
+}
+const mapStateToProps = state => {
+  return {
+    items: !!state.items && Object.values(state.items),
   }
 }
 
@@ -32,4 +39,4 @@ const mapDispatchToProps = dispatch => ({
   load: () => dispatch(loadItems()),
 })
 
-export default connect(null, mapDispatchToProps)(HomeScreen)
+export default connect(mapStateToProps, mapDispatchToProps)(HomeScreen)

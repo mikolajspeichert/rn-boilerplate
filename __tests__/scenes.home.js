@@ -3,9 +3,9 @@ import React from 'react'
 import configureStore from 'redux-mock-store'
 import thunk from 'redux-thunk'
 import renderer from 'react-test-renderer'
-import sinon from 'sinon'
+// import sinon from 'sinon'
 import HomeScreen from '@scenes/Home'
-import { loadItems } from '@scenes/Home/actions'
+import { loadItems, addItem } from '@scenes/Home/actions'
 import storage from '@storage'
 
 const state = {}
@@ -51,10 +51,22 @@ describe('Home Screen', () => {
 
 describe('Home action', () => {
   it('loads items correctly', done => {
-    const fakeDispatch = action => {
+    const mockDispatch = action => {
       expect(action).toMatchSnapshot()
       done()
     }
-    loadItems()(fakeDispatch)
+    loadItems()(mockDispatch)
+  })
+
+  it('adds item correctly', done => {
+    const mockItem = {
+      id: 'mock',
+      title: 'mock',
+    }
+    const mockDispatch = action => {
+      expect(action).toMatchSnapshot()
+      done()
+    }
+    addItem(mockItem)(mockDispatch)
   })
 })
