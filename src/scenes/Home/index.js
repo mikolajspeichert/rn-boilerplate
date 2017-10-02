@@ -20,7 +20,7 @@ class HomeScreen extends Component {
   render() {
     return (
       <View style={styles.home}>
-        <Text>
+        <Text testID="welcome">
           {I18n.t('home.welcome')} {Platform.OS === 'ios' ? 'iOS' : 'Android'}
         </Text>
         <Button onPress={() => createDefaultNotification()} title="Notify" />

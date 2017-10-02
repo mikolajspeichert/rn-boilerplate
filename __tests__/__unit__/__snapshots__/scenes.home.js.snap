@@ -1,0 +1,108 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Home Screen renders correctly 1`] = `
+<View
+  style={
+    Object {
+      "backgroundColor": "#fafafa",
+    }
+  }
+>
+  <Text
+    accessible={true}
+    allowFontScaling={true}
+    disabled={false}
+    ellipsizeMode="tail"
+    testID="welcome"
+  >
+    [missing "en.home.welcome" translation]
+     
+    iOS
+  </Text>
+  <View
+    accessibilityComponentType="button"
+    accessibilityLabel={undefined}
+    accessibilityTraits={
+      Array [
+        "button",
+      ]
+    }
+    accessible={true}
+    collapsable={undefined}
+    hitSlop={undefined}
+    isTVSelectable={true}
+    nativeID={undefined}
+    onLayout={undefined}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      Object {
+        "opacity": 1,
+      }
+    }
+    testID={undefined}
+    tvParallaxProperties={undefined}
+  >
+    <View
+      style={
+        Array [
+          Object {},
+        ]
+      }
+    >
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        disabled={false}
+        ellipsizeMode="tail"
+        style={
+          Array [
+            Object {
+              "color": "#007AFF",
+              "fontSize": 18,
+              "padding": 8,
+              "textAlign": "center",
+            },
+          ]
+        }
+      >
+        Notify
+      </Text>
+    </View>
+  </View>
+</View>
+`;
+
+exports[`Home action adds item correctly 1`] = `
+Object {
+  "type": "TRY_ADD_ITEM",
+  "value": Object {
+    "id": "mock",
+    "title": "mock",
+  },
+}
+`;
+
+exports[`Home action loads items correctly 1`] = `
+Object {
+  "type": "LOAD_ITEMS",
+  "value": Results {
+    "0": Item {
+      "created": 1970-01-01T00:00:00.001Z,
+      "id": "first",
+      "notes": "No notes on this one",
+      "title": "FIRST_ITEM",
+    },
+    "1": Item {
+      "created": 1970-01-01T00:00:00.100Z,
+      "id": "second",
+      "notes": "Some notes",
+      "title": "Second item",
+    },
+  },
+}
+`;

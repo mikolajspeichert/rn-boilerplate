@@ -10,3 +10,11 @@ jest.mock('react-native-i18n', () => {
 
 jest.mock('@assets/icons', () => jest.fn())
 jest.mock('ScrollView', () => jest.genMockFromModule('ScrollView'))
+//
+// /**
+//  * If we are running `e2e` tests, we want to setup and configure
+//  * detox
+//  */
+// if (process.argv[2].includes('__e2e__')) {
+//
+// }
