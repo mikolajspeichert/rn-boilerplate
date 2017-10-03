@@ -12,7 +12,7 @@ class SettingsScreen extends Component {
   render() {
     return (
       <View style={styles.settings}>
-        <Text>{I18n.t('settings.placeholder')}</Text>
+        <Text testID="settings">{I18n.t('settings.placeholder')}</Text>
       </View>
     )
   }

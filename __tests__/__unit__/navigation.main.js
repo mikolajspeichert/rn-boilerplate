@@ -7,14 +7,14 @@ import Navigator from '@navigation/main'
 const state = {
   nav: {
     index: 0,
-    routes: [{ routeName: 'None' }],
+    routes: [{ routeName: 'Home' }],
   },
 }
 const mockStore = configureStore()
 
 describe('Main navigator', () => {
   it('renders correctly', () => {
-  //  const wrapper = renderer.create(<Navigator store={mockStore(state)} />)
-    expect('').toMatchSnapshot()
+    const wrapper = renderer.create(<Navigator store={mockStore(state)} />)
+    expect(wrapper).toMatchSnapshot()
   })
 })

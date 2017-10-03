@@ -12,7 +12,7 @@ class AddScreen extends Component {
   render() {
     return (
       <View style={styles.more}>
-        <Text>{I18n.t('add.welcome')}</Text>
+        <Text testID="add">{I18n.t('add.welcome')}</Text>
       </View>
     )
   }
