@@ -4,22 +4,28 @@ React Native boilerplate - small piece of code with dependencies I consider impo
 Dependencies:
 
 - [Redux](http://redux.js.org)
-- [dotenv](https://github.com/zetachang/react-native-dotenv)
 - [React navigation](https://reactnavigation.org)
+- [Realm](https://realm.io/docs/javascript/latest/)
 - [i18n](https://github.com/AlexanderZaytsev/react-native-i18n)
-- [eslint](https://eslint.org)
-- [jest](https://facebook.github.io/jest/)
-- [prettier](https://github.com/prettier/prettier)
+- [React Native push notification](https://github.com/zo0r/react-native-push-notification)
 - [uuid](https://www.npmjs.com/package/react-native-uuid)
+- [dotenv](https://github.com/zetachang/react-native-dotenv)
+
+- [jest](https://facebook.github.io/jest/)
+- [detox](https://github.com/wix/detox)
+- [enzyme](https://github.com/airbnb/enzyme)
+- [sinon](http://sinonjs.org)
+
+- [eslint](https://eslint.org)
+- [prettier](https://github.com/prettier/prettier)
 
 ## Quick start
 
 1. Clone using `git clone https://github.com/mikolajspeichert/rn-boilerplate boilerplate`
 2. `cd boilerplate`
 3. Run `npm install`
-4. Run tests using `npm run test`
+4. Run unit tests using `npm run test-unit`
 5. To run on device emulators, you have to have installed `react-native` npm module, then run `react-native run-ios` or `react-native run-android`. See more on [React Native getting started](https://facebook.github.io/react-native/docs/getting-started.html).
+6. To run e2e tests run `npm run test-e2e`
 
 > This project is still in development, please inform about any issues
-
-> As soon as react 16.0.0 reaches rc/stable version, tests will be upgraded to [enzyme](https://github.com/airbnb/enzyme)
