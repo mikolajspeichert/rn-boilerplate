@@ -13,6 +13,7 @@ exports[`SettingsScreen renders correctly 1`] = `
     allowFontScaling={true}
     disabled={false}
     ellipsizeMode="tail"
+    testID="settings"
   >
     [missing "en.settings.placeholder" translation]
   </Text>

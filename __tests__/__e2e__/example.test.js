@@ -1,5 +1,4 @@
 import 'react-native'
-import React from 'react'
 const detox = require('detox')
 const config = require('../../package.json').detox
 

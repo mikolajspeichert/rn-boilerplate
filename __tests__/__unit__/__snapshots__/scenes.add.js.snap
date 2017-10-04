@@ -14,6 +14,7 @@ exports[`AddScreen renders correctly 1`] = `
     allowFontScaling={true}
     disabled={false}
     ellipsizeMode="tail"
+    testID="add"
   >
     [missing "en.add.welcome" translation]
   </Text>

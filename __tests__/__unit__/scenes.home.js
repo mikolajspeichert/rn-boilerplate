@@ -2,7 +2,7 @@ import 'react-native'
 import React from 'react'
 import configureStore from 'redux-mock-store'
 import thunk from 'redux-thunk'
-import renderer from 'react-test-renderer'
+import { shallow } from 'enzyme'
 // import sinon from 'sinon'
 import HomeScreen from '@scenes/Home'
 import { loadItems, addItem } from '@scenes/Home/actions'
@@ -40,7 +40,7 @@ afterAll(async () => {
 
 describe('Home Screen', () => {
   it('renders correctly', () => {
-    const wrapper = renderer.create(<HomeScreen store={mockStore(state)} />)
+    const wrapper = shallow(<HomeScreen store={mockStore(state)} />)
     expect(wrapper).toMatchSnapshot()
   })
 

@@ -1,12 +1,12 @@
 import 'react-native'
 import React from 'react'
-import renderer from 'react-test-renderer'
+import { shallow } from 'enzyme'
 import Cell from '@reusable/Cell'
 
 describe('Reusable Cell', () => {
   it('renders correctly', () => {
     expect(
-      renderer.create(<Cell id="cell" title="Cell" onPress={jest.fn()} />)
+      shallow(<Cell id="cell" title="Cell" onPress={jest.fn()} />)
     ).toMatchSnapshot()
   })
 })

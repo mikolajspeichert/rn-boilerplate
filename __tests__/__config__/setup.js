@@ -1,3 +1,8 @@
+import Enzyme from 'enzyme'
+import Adapter from 'enzyme-adapter-react-16'
+
+Enzyme.configure({ adapter: new Adapter() })
+
 jest.mock('react-native-i18n', () => {
   const i18njs = require('i18n-js')
   const en = require('@i18n/locales/en')

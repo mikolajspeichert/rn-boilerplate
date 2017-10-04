@@ -1,7 +1,8 @@
 import 'react-native'
 import React from 'react'
 import configureStore from 'redux-mock-store'
-import renderer from 'react-test-renderer'
+import { shallow } from 'enzyme'
+
 import Navigator from '@navigation/main'
 
 const state = {
@@ -14,7 +15,7 @@ const mockStore = configureStore()
 
 describe('Main navigator', () => {
   it('renders correctly', () => {
-    const wrapper = renderer.create(<Navigator store={mockStore(state)} />)
+    const wrapper = shallow(<Navigator store={mockStore(state)} />)
     expect(wrapper).toMatchSnapshot()
   })
 })
