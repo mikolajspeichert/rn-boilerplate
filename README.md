@@ -10,12 +10,10 @@ Dependencies:
 - [React Native push notification](https://github.com/zo0r/react-native-push-notification)
 - [uuid](https://www.npmjs.com/package/react-native-uuid)
 - [dotenv](https://github.com/zetachang/react-native-dotenv)
-
 - [jest](https://facebook.github.io/jest/)
 - [detox](https://github.com/wix/detox)
 - [enzyme](https://github.com/airbnb/enzyme)
 - [sinon](http://sinonjs.org)
-
 - [eslint](https://eslint.org)
 - [prettier](https://github.com/prettier/prettier)
 

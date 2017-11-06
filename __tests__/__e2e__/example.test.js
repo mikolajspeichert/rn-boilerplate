@@ -8,6 +8,8 @@ jasmine.DEFAULT_TIMEOUT_INTERVAL = 120000
 
 beforeAll(async () => {
   await detox.init(config)
+  await detox.init(config, { launchApp: false })
+  await device.launchApp({ permissions: { notifications: 'YES' } })
 })
 
 afterAll(async () => {
