@@ -15,5 +15,5 @@ export class App extends Component {
 }
 
 export default () => {
-  AppRegistry.registerComponent('boilerplate', () => App)
+  AppRegistry.registerComponent('kama', () => App)
 }

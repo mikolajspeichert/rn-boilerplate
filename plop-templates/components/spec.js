@@ -1,0 +1,1 @@
+/* @TODO Write test for components and use it as template */

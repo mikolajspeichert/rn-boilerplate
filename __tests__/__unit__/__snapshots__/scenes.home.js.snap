@@ -128,19 +128,6 @@ Object {
 exports[`Home action loads items correctly 1`] = `
 Object {
   "type": "LOAD_ITEMS",
-  "value": Results {
-    "0": Item {
-      "created": 1970-01-01T00:00:00.001Z,
-      "id": "first",
-      "notes": "No notes on this one",
-      "title": "FIRST_ITEM",
-    },
-    "1": Item {
-      "created": 1970-01-01T00:00:00.100Z,
-      "id": "second",
-      "notes": "Some notes",
-      "title": "Second item",
-    },
-  },
+  "value": Array [],
 }
 `;

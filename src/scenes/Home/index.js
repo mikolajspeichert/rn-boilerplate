@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
-import { View, Text, Image, Platform, Button } from 'react-native'
+import { View, Text, Image, Platform } from 'react-native'
 import { connect } from 'react-redux'
-import { createDefaultNotification } from '@services/notification'
 import icons from '@assets/icons'
 import styles from './styles'
 import { loadItems } from './actions'
@@ -23,7 +22,6 @@ class HomeScreen extends Component {
         <Text testID="welcome">
           {I18n.t('home.welcome')} {Platform.OS === 'ios' ? 'iOS' : 'Android'}
         </Text>
-        <Button onPress={() => createDefaultNotification()} title="Notify" />
       </View>
     )
   }

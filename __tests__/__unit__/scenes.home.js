@@ -6,37 +6,9 @@ import { shallow } from 'enzyme'
 // import sinon from 'sinon'
 import HomeScreen from '@scenes/Home'
 import { loadItems, addItem } from '@scenes/Home/actions'
-import storage from '@storage'
 
 const state = {}
 const mockStore = configureStore([thunk])
-
-beforeAll(async () => {
-  let realm = await storage
-  realm.write(() => {
-    realm.create('Item', {
-      id: 'first',
-      title: 'FIRST_ITEM',
-      notes: 'No notes on this one',
-      created: new Date(1),
-    })
-    realm.create('Item', {
-      id: 'second',
-      title: 'Second item',
-      notes: 'Some notes',
-      created: new Date(100),
-    })
-  })
-})
-
-afterAll(async () => {
-  let realm = await storage
-  realm.write(() => {
-    realm.delete(realm.objects('Item'))
-  })
-
-  realm.close()
-})
 
 describe('Home Screen', () => {
   it('renders correctly', () => {

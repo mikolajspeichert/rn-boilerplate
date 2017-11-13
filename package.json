@@ -7,8 +7,12 @@
     "test-e2e": "detox build && jest __e2e__",
     "test-unit": "jest __unit__"
   },
+  "bin": {
+    "plop": "plop"
+  },
   "dependencies": {
     "i18n-js": "^3.0.1",
+    "inquirer-recursive": "0.0.5",
     "react": "^16.0.0-alpha.12",
     "react-native": "^0.48.4",
     "react-native-dotenv": "^0.1.0",
@@ -17,7 +21,6 @@
     "react-native-uuid": "^1.4.9",
     "react-navigation": "^1.0.0-beta.13",
     "react-redux": "^5.0.6",
-    "realm": "^1.12.0",
     "redux": "^3.7.2",
     "redux-logger": "^3.0.6",
     "redux-thunk": "^2.2.0"
@@ -40,6 +43,7 @@
     "eslint-plugin-react-native": "^3.1.0",
     "jest": "20.0.4",
     "jest-cli": "^20.0.4",
+    "plop": "^1.9.0",
     "prettier": "^1.7.4",
     "react-dom": "^16.0.0",
     "react-test-renderer": "^16.0.0",
@@ -53,13 +57,13 @@
     },
     "collectCoverage": true,
     "coverageDirectory": "__tests__/__coverage__",
+    "verbose": true,
     "transformIgnorePatterns": [
       "node_modules/(?!(jest-)?react-native|react-navigation)"
     ],
     "setupFiles": [
       "./__tests__/__config__/setup.js"
     ],
-    "setupTestFrameworkScriptFile": "./__tests__/__e2e__/example.test.js",
     "testPathIgnorePatterns": [
       "/node_modules/",
       "/__tests__/__config__/",
@@ -70,8 +74,8 @@
     "runner": "jest",
     "configurations": {
       "ios.sim.debug": {
-        "binaryPath": "ios/build/Build/Products/Debug-iphonesimulator/boilerplate.app",
-        "build": "xcodebuild -project ios/boilerplate.xcodeproj -scheme boilerplate -configuration Debug -sdk iphonesimulator -derivedDataPath ios/build",
+        "binaryPath": "ios/build/Build/Products/Debug-iphonesimulator/kama.app",
+        "build": "xcodebuild -project ios/kama.xcodeproj -scheme kama -configuration Debug -sdk iphonesimulator -derivedDataPath ios/build",
         "type": "ios.simulator",
         "name": "iPhone 7"
       }
