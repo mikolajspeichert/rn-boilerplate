@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
-import { View, Text, Image, Platform, Button } from 'react-native'
+import { View, Image } from 'react-native'
 import { connect } from 'react-redux'
 import icons from '@assets/icons'
 import I18n from '@i18n'

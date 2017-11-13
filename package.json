@@ -1,11 +1,12 @@
 {
-  "name": "boilerplate",
+  "name": "kama",
   "version": "0.0.1",
   "private": true,
   "scripts": {
     "test": "npm run test-unit && npm run test-e2e",
-    "test-e2e": "detox build && jest __e2e__",
-    "test-unit": "jest __unit__"
+    "test:e2e": "detox build && jest __e2e__",
+    "test:unit": "jest __unit__",
+    "test:unit:common": "jest .*/spec.js"
   },
   "bin": {
     "plop": "plop"
@@ -67,7 +68,8 @@
     "testPathIgnorePatterns": [
       "/node_modules/",
       "/__tests__/__config__/",
-      "/__tests__/__coverage__"
+      "/__tests__/__coverage__",
+      "plop-templates"
     ]
   },
   "detox": {

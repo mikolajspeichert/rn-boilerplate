@@ -3,17 +3,17 @@ import PropTypes from 'prop-types'
 import {View} from 'react-native'
 
 class {{pascalCase name}} extends Component {
-    render() {
-        const {
+  render() {
+    const {
 
-        } = this.props
-        return <View></View>
-    }
+    } = this.props
+    return <View></View>
+  }
 }
 
 {{pascalCase name}}.propTypes = {
 {{#each props}}
-    {{this.name}}: PropTypes.{{this.type}}{{#if this.required}}.isRequired{{/if}},
+  {{camelCase this.name}}: PropTypes.{{this.type}}{{#if this.required}}.isRequired{{/if}},
 {{/each}}
 }
 

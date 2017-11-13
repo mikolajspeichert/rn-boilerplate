@@ -1,7 +1,7 @@
 import 'react-native'
 import React from 'react'
 import { shallow } from 'enzyme'
-import Cell from '@reusable/Cell'
+import Cell from '.'
 
 describe('Reusable Cell', () => {
   it('renders correctly', () => {

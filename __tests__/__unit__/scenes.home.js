@@ -5,19 +5,16 @@ import thunk from 'redux-thunk'
 import { shallow } from 'enzyme'
 // import sinon from 'sinon'
 import HomeScreen from '@scenes/Home'
-import { loadItems, addItem } from '@scenes/Home/actions'
+import { actions, loadItems, addItem } from '@scenes/Home/actions'
+import reducer from '@scenes/Home/reducer'
 
 const state = {}
 const mockStore = configureStore([thunk])
 
-describe('Home Screen', () => {
+describe('Scene Home', () => {
   it('renders correctly', () => {
     const wrapper = shallow(<HomeScreen store={mockStore(state)} />)
     expect(wrapper).toMatchSnapshot()
-  })
-
-  it('dispatches navigation action', () => {
-    console.log()
   })
 })
 
@@ -40,5 +37,27 @@ describe('Home action', () => {
       done()
     }
     addItem(mockItem)(mockDispatch)
+  })
+})
+
+describe('Home reducer', () => {
+  it('reduces initial state', () => {
+    expect(reducer(null, { type: 'None' })).toMatchSnapshot()
+  })
+
+  it('reduces item loading', () => {
+    expect(
+      reducer(null, {
+        type: actions.LOAD_ITEMS,
+        value: {
+          '0': {
+            id: 'item',
+            title: 'ITEM',
+            notes: 'item notes',
+            created: new Date(999),
+          },
+        },
+      })
+    ).toMatchSnapshot()
   })
 })
