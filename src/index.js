@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import { Provider } from 'react-redux'
 import { AppRegistry } from 'react-native'
 import store from '@store'
-import Navigator from '@navigation/main'
+import Navigator from '@navigation/Login'
 
 export class App extends Component {
   render() {
@@ -15,5 +15,5 @@ export class App extends Component {
 }
 
 export default () => {
-  AppRegistry.registerComponent('kama', () => App)
+  AppRegistry.registerComponent('boilerplate', () => App)
 }

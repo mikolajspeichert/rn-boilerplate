@@ -1,10 +1,21 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Main navigator renders correctly 1`] = `
+exports[`Login action is dispatched 1`] = `
+Object {
+  "type": "LOGIN_MOVE",
+  "value": "Onboarding",
+}
+`;
+
+exports[`Login reducer ignores unknown actions 1`] = `null`;
+
+exports[`Login reducer reduces async action 1`] = `null`;
+
+exports[`Scene Login renders correctly 1`] = `
 ShallowWrapper {
   "length": 1,
   Symbol(enzyme.__root__): [Circular],
-  Symbol(enzyme.__unrendered__): <Connect(Navigator)
+  Symbol(enzyme.__unrendered__): <Connect(Login)
     store={
         Object {
             "clearActions": [Function],
@@ -26,17 +37,9 @@ ShallowWrapper {
   Symbol(enzyme.__node__): Object {
     "instance": null,
     "key": null,
-    "nodeType": "function",
+    "nodeType": "class",
     "props": Object {
-      "dispatch": [Function],
-      "state": Object {
-        "index": 0,
-        "routes": Array [
-          Object {
-            "routeName": "Home",
-          },
-        ],
-      },
+      "move": [Function],
       "store": Object {
         "clearActions": [Function],
         "dispatch": [Function],
@@ -73,17 +76,9 @@ ShallowWrapper {
     Object {
       "instance": null,
       "key": null,
-      "nodeType": "function",
+      "nodeType": "class",
       "props": Object {
-        "dispatch": [Function],
-        "state": Object {
-          "index": 0,
-          "routes": Array [
-            Object {
-              "routeName": "Home",
-            },
-          ],
-        },
+        "move": [Function],
         "store": Object {
           "clearActions": [Function],
           "dispatch": [Function],

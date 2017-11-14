@@ -3,12 +3,14 @@ import React from 'react'
 import configureStore from 'redux-mock-store'
 import { shallow } from 'enzyme'
 
-import Navigator from '@navigation/main'
+import Navigator from '@navigation/Main'
 
 const state = {
-  nav: {
-    index: 0,
-    routes: [{ routeName: 'Home' }],
+  navigation: {
+    main: {
+      index: 0,
+      routes: [{ routeName: 'Home' }],
+    },
   },
 }
 const mockStore = configureStore()

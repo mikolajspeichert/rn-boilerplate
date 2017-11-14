@@ -1,25 +1,9 @@
 import { combineReducers } from 'redux'
-import { NavigationActions } from 'react-navigation'
-import { Navigator } from '@navigation/main'
-import home from '@scenes/Home/reducer'
 
-const initialState = Navigator.router.getStateForAction(
-  Navigator.router.getActionForPathAndParams('Home')
-)
-
-const nav = (state = initialState, action) => {
-  switch (action.type) {
-    case 'Add':
-      return Navigator.router.getStateForAction(
-        NavigationActions.navigate({ routeName: 'Add' }),
-        state
-      )
-    default:
-      return Navigator.router.getStateForAction(action, state)
-  }
-}
+import main from '@scenes/Main/reducer'
+import navigation from '@navigation/reducer'
 
 export default combineReducers({
-  nav,
-  home,
+  navigation,
+  main,
 })

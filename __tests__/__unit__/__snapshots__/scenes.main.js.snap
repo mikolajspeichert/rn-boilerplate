@@ -1,42 +1,25 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Home action adds item correctly 1`] = `
+exports[`Main action is dispatched 1`] = `
 Object {
-  "type": "TRY_ADD_ITEM",
-  "value": Object {
-    "id": "mock",
-    "title": "mock",
-  },
-}
-`;
-
-exports[`Home action loads items correctly 1`] = `
-Object {
-  "type": "LOAD_ITEMS",
+  "type": "DEFAULT_ACTION",
   "value": Array [],
 }
 `;
 
-exports[`Home reducer reduces initial state 1`] = `null`;
+exports[`Main reducer ignores unknown actions 1`] = `null`;
 
-exports[`Home reducer reduces item loading 1`] = `
+exports[`Main reducer reduces async action 1`] = `
 Object {
-  "items": Object {
-    "0": Object {
-      "created": 1970-01-01T00:00:00.999Z,
-      "id": "item",
-      "notes": "item notes",
-      "title": "ITEM",
-    },
-  },
+  "items": Array [],
 }
 `;
 
-exports[`Scene Home renders correctly 1`] = `
+exports[`Scene Main renders correctly 1`] = `
 ShallowWrapper {
   "length": 1,
   Symbol(enzyme.__root__): [Circular],
-  Symbol(enzyme.__unrendered__): <Connect(HomeScreen)
+  Symbol(enzyme.__unrendered__): <Connect(Main)
     store={
         Object {
             "clearActions": [Function],
@@ -60,9 +43,7 @@ ShallowWrapper {
     "key": null,
     "nodeType": "class",
     "props": Object {
-      "goToMore": [Function],
-      "items": false,
-      "load": [Function],
+      "defaultAction": [Function],
       "store": Object {
         "clearActions": [Function],
         "dispatch": [Function],
@@ -101,9 +82,7 @@ ShallowWrapper {
       "key": null,
       "nodeType": "class",
       "props": Object {
-        "goToMore": [Function],
-        "items": false,
-        "load": [Function],
+        "defaultAction": [Function],
         "store": Object {
           "clearActions": [Function],
           "dispatch": [Function],

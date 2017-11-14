@@ -1,5 +1,5 @@
 {
-  "name": "kama",
+  "name": "boilerplate",
   "version": "0.0.1",
   "private": true,
   "scripts": {
@@ -76,8 +76,8 @@
     "runner": "jest",
     "configurations": {
       "ios.sim.debug": {
-        "binaryPath": "ios/build/Build/Products/Debug-iphonesimulator/kama.app",
-        "build": "xcodebuild -project ios/kama.xcodeproj -scheme kama -configuration Debug -sdk iphonesimulator -derivedDataPath ios/build",
+        "binaryPath": "ios/build/Build/Products/Debug-iphonesimulator/boilerplate.app",
+        "build": "xcodebuild -project ios/boilerplate.xcodeproj -scheme kama -configuration Debug -sdk iphonesimulator -derivedDataPath ios/build",
         "type": "ios.simulator",
         "name": "iPhone 7"
       }

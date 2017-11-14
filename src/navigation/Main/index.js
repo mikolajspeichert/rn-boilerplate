@@ -6,13 +6,13 @@ import {
   TabBarBottom,
 } from 'react-navigation'
 
-import HomeScreen from '@scenes/Home'
+import Main from '@scenes/Main'
 import AddScreen from '@scenes/Add'
 import SettingsScreen from '@scenes/Settings'
 
-export const Navigator = TabNavigator(
+export const MainNavigator = TabNavigator(
   {
-    Home: { screen: HomeScreen },
+    Home: { screen: Main },
     Add: { screen: AddScreen },
     Settings: { screen: SettingsScreen },
   },
@@ -31,14 +31,16 @@ export const Navigator = TabNavigator(
   }
 )
 
-const Nav = ({ dispatch, nav }) => (
-  <Navigator navigation={addNavigationHelpers({ dispatch, state: nav })} />
+const Navigator = ({ dispatch, state }) => (
+  <MainNavigator
+    navigation={addNavigationHelpers({ dispatch, state: state })}
+  />
 )
 
 const mapStateToProps = state => {
   return {
-    nav: state.nav,
+    state: state.navigation.main,
   }
 }
 
-export default connect(mapStateToProps)(Nav)
+export default connect(mapStateToProps)(Navigator)

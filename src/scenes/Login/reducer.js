@@ -1,13 +1,10 @@
 import { actions } from './actions'
 
-var initialState = {
-  items: [],
-  theme: '#fafafa',
-}
+const initialState = {}
 
 export default (state = initialState, action) => {
   switch (action.type) {
-    case actions.LOAD_ITEMS:
+    case actions.DEFAULT_ACTION:
       return Object.assign({}, state, {
         items: action.value,
       })
