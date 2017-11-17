@@ -127,7 +127,7 @@ function addManyTemplates(dir) {
 
 function getLanguageExample() {
   return `{{camelCase name}}: {
-    title: '{{camelCase name}}',
+    title: '{{pascalCase name}}',
     example: 'Lorem ipsum dolor sit amet.',
   },
   $1`

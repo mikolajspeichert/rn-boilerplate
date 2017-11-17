@@ -23,10 +23,10 @@ describe('Onboarding action', () => {
 
 describe('Onboarding reducer', () => {
   it('ignores unknown actions', () => {
-    expect(reducer(null, { type: 'UNKNOWN' })).toMatchSnapshot()
+    expect(reducer(undefined, { type: undefined })).toMatchSnapshot()
   })
 
   it('reduces async action', () => {
-    expect(reducer(null, moveToMain())).toMatchSnapshot()
+    expect(reducer(undefined, moveToMain())).toMatchSnapshot()
   })
 })

@@ -1,8 +1,27 @@
-import { combineReducers } from 'redux'
-import login from './Login/reducer'
-import main from './Main/reducer'
+import { NavigationActions } from 'react-navigation'
 
-export default combineReducers({
-  login,
-  main,
-})
+import { MainNavigator as Navigator } from './Main'
+import actions from './actions'
+
+const initialState = Navigator.router.getStateForAction(
+  NavigationActions.init()
+)
+
+export default (state = initialState, action) => {
+  switch (action.type) {
+    case actions.MOVE:
+      return Navigator.router.getStateForAction(
+        NavigationActions.navigate({ routeName: action.value }),
+        state
+      )
+    case actions.RESET:
+      return Navigator.router.getStateForAction(
+        NavigationActions.reset({
+          index: 0,
+          actions: [NavigationActions.navigate({ routeName: action.value })],
+        })
+      )
+    default:
+      return Navigator.router.getStateForAction(action, state)
+  }
+}

@@ -1,46 +1,51 @@
 import React from 'react'
 import { connect } from 'react-redux'
-import {
-  addNavigationHelpers,
-  TabNavigator,
-  TabBarBottom,
-} from 'react-navigation'
+import { addNavigationHelpers, StackNavigator } from 'react-navigation'
 
 import Main from '@scenes/Main'
-import AddScreen from '@scenes/Add'
-import SettingsScreen from '@scenes/Settings'
+import Add from '@scenes/Add'
+import Settings from '@scenes/Settings'
+import Splash from '@scenes/Splash'
+import LoginNavigator from '@navigation/Login'
 
-export const MainNavigator = TabNavigator(
+const Routes = {
+  Splash: 'Splash',
+  Login: 'Login',
+  Main: 'Main',
+  Add: 'Add',
+  Settings: 'Settings',
+}
+
+/**
+* See https://reactnavigation.org/docs/navigators/stack#RouteConfigs
+*/
+const MainNavigator = StackNavigator(
   {
-    Home: { screen: Main },
-    Add: { screen: AddScreen },
-    Settings: { screen: SettingsScreen },
+    [Routes.Splash]: { screen: Splash },
+    [Routes.Login]: {
+      screen: LoginNavigator,
+      navigationOptions: { header: null },
+    },
+    [Routes.Main]: { screen: Main },
+    [Routes.Add]: { screen: Add },
+    [Routes.Settings]: { screen: Settings },
   },
   {
-    tabBarComponent: TabBarBottom,
-    tabBarPosition: 'bottom',
-    animationEnabled: true,
-    lazy: false,
-    tabBarOptions: {
-      activeBackgroundColor: '#3c3c3c',
-      inactiveBackgroundColor: '#505050',
-      showLabel: false,
-      activeTintColor: '#fafafa',
-      inactiveTintColor: '#fafafa',
-    },
+    initialRouteName: Routes.Splash,
   }
 )
 
+/**
+* We treat Navigator as a wrapper for scenes inside.
+*/
 const Navigator = ({ dispatch, state }) => (
   <MainNavigator
-    navigation={addNavigationHelpers({ dispatch, state: state })}
+    navigation={addNavigationHelpers({
+      dispatch,
+      state: state.navigation,
+    })}
   />
 )
 
-const mapStateToProps = state => {
-  return {
-    state: state.navigation.main,
-  }
-}
-
-export default connect(mapStateToProps)(Navigator)
+export { Routes, MainNavigator }
+export default connect(state => ({ state }))(Navigator)

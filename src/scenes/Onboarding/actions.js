@@ -8,7 +8,7 @@ export const actions = {
 
 export const moveToMain = () => {
   return {
-    type: NavigatorActions.login.MOVE,
-    value: 'Main',
+    type: NavigatorActions.MOVE,
+    value: 'Splash',
   }
 }

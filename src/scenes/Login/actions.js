@@ -1,14 +1,14 @@
 import NavigatorActions from '@navigation/actions'
 
-const MOVE = 'MOVE'
+const DEFAULT_ACTION = 'DEFAULT_ACTION'
 
 export const actions = {
-  MOVE,
+  DEFAULT_ACTION,
 }
 
 export const moveToOnboarding = () => {
   return {
-    type: NavigatorActions.login.MOVE,
-    value: 'Onboarding',
+    type: NavigatorActions.MOVE,
+    value: 'Onboarding', //Routes.Onboarding,
   }
 }

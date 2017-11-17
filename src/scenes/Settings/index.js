@@ -4,7 +4,7 @@ import styles from './styles'
 import icons from '@assets/icons'
 import I18n from '@i18n'
 
-class SettingsScreen extends Component {
+class Settings extends Component {
   static navigationOptions = {
     title: I18n.t('settings.title'),
     tabBarIcon: <Image source={icons.settings} style={styles.icon} />,
@@ -18,4 +18,4 @@ class SettingsScreen extends Component {
   }
 }
 
-export default SettingsScreen
+export default Settings

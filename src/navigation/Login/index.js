@@ -1,34 +1,19 @@
-import React from 'react'
-import { connect } from 'react-redux'
-import { addNavigationHelpers, StackNavigator } from 'react-navigation'
+import { StackNavigator } from 'react-navigation'
 
-import MainNavigator from '@navigation/Main'
 import Login from '@scenes/Login'
 import Onboarding from '@scenes/Onboarding'
 
-export const LoginNavigator = StackNavigator({
-  Onboarding: {
-    screen: Onboarding,
-  },
-  Login: {
-    screen: Login,
-  },
-  Main: {
-    screen: MainNavigator,
-    navigationOptions: {
-      title: 'Main',
-      headerLeft: null,
-    },
-  },
+const Routes = {
+  Login: 'Login',
+  Onboarding: 'Onboarding',
+  Finished: 'Finished',
+}
+
+export { Routes }
+/**
+ * This is a nested navigator, so we just pass it's config
+ */
+export default StackNavigator({
+  [Routes.Login]: { screen: Login },
+  [Routes.Onboarding]: { screen: Onboarding },
 })
-
-const Navigator = ({ dispatch, state }) => (
-  <LoginNavigator
-    navigation={addNavigationHelpers({
-      dispatch,
-      state: state.navigation.login,
-    })}
-  />
-)
-
-export default connect(state => ({ state }))(Navigator)

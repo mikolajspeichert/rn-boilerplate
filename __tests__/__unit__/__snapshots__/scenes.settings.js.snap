@@ -4,7 +4,7 @@ exports[`SettingsScreen renders correctly 1`] = `
 ShallowWrapper {
   "length": 1,
   Symbol(enzyme.__root__): [Circular],
-  Symbol(enzyme.__unrendered__): <SettingsScreen
+  Symbol(enzyme.__unrendered__): <Settings
     store={
         Object {
             "clearActions": [Function],

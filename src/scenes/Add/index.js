@@ -4,7 +4,7 @@ import icons from '@assets/icons'
 import styles from './styles'
 import I18n from '@i18n'
 
-class AddScreen extends Component {
+class Add extends Component {
   static navigationOptions = {
     title: I18n.t('add.more'),
     tabBarIcon: <Image source={icons.add} style={styles.icon} />,
@@ -18,4 +18,4 @@ class AddScreen extends Component {
   }
 }
 
-export default AddScreen
+export default Add

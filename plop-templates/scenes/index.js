@@ -17,7 +17,6 @@ class {{pascalCase name}} extends Component {
 
   static navigationOptions = {
     title: I18n.t('{{camelCase name}}.title'),
-    tabBarIcon: <Image source={icons.check} style={styles.icon} />,
   }
 
   render() {

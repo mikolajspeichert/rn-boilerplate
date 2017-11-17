@@ -8,16 +8,20 @@ export default {
     placeholder: 'Lorem ipsum',
   },
   login: {
-    title: 'login',
+    title: 'Login',
     example: 'You are in login scene',
   },
   onboarding: {
-    title: 'onboarding',
+    title: 'Onboarding',
     example: 'You are in onboarding scene',
   },
   main: {
-    title: 'main',
+    title: 'Main',
     example: 'You are in main scene',
+  },
+  splash: {
+    title: 'Splash',
+    example: 'Welcome to rn-boilerplate',
   },
   /*DONT-REMOVE--end-of-data*/
 }

@@ -1,6 +1,10 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Main navigator renders correctly 1`] = `
+exports[`Navigators are configured correctly 1`] = `undefined`;
+
+exports[`Navigators are configured correctly 2`] = `[Function]`;
+
+exports[`Navigators render correctly 1`] = `
 ShallowWrapper {
   "length": 1,
   Symbol(enzyme.__root__): [Circular],
@@ -30,12 +34,14 @@ ShallowWrapper {
     "props": Object {
       "dispatch": [Function],
       "state": Object {
-        "index": 0,
-        "routes": Array [
-          Object {
-            "routeName": "Home",
-          },
-        ],
+        "navigation": Object {
+          "index": 0,
+          "routes": Array [
+            Object {
+              "routeName": "Splash",
+            },
+          ],
+        },
       },
       "store": Object {
         "clearActions": [Function],
@@ -77,12 +83,14 @@ ShallowWrapper {
       "props": Object {
         "dispatch": [Function],
         "state": Object {
-          "index": 0,
-          "routes": Array [
-            Object {
-              "routeName": "Home",
-            },
-          ],
+          "navigation": Object {
+            "index": 0,
+            "routes": Array [
+              Object {
+                "routeName": "Splash",
+              },
+            ],
+          },
         },
         "store": Object {
           "clearActions": [Function],

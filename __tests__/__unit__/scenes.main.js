@@ -26,12 +26,12 @@ describe('Main action', () => {
 
 describe('Main reducer', () => {
   it('ignores unknown actions', () => {
-    expect(reducer(null, { type: 'UNKNOWN' })).toMatchSnapshot()
+    expect(reducer(undefined, { type: undefined })).toMatchSnapshot()
   })
 
   it('reduces async action', done => {
     defaultAction()(action => {
-      expect(reducer(null, action)).toMatchSnapshot()
+      expect(reducer(undefined, action)).toMatchSnapshot()
       done()
     })
   })

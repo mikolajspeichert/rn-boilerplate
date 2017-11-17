@@ -1,21 +1,10 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Onboarding action is dispatched 1`] = `
-Object {
-  "type": "MOVE",
-  "value": "Splash",
-}
-`;
-
-exports[`Onboarding reducer ignores unknown actions 1`] = `Object {}`;
-
-exports[`Onboarding reducer reduces async action 1`] = `Object {}`;
-
-exports[`Scene Onboarding renders correctly 1`] = `
+exports[`Scene Splash renders correctly 1`] = `
 ShallowWrapper {
   "length": 1,
   Symbol(enzyme.__root__): [Circular],
-  Symbol(enzyme.__unrendered__): <Connect(Onboarding)
+  Symbol(enzyme.__unrendered__): <Connect(Splash)
     store={
         Object {
             "clearActions": [Function],
@@ -39,7 +28,8 @@ ShallowWrapper {
     "key": null,
     "nodeType": "class",
     "props": Object {
-      "move": [Function],
+      "login": [Function],
+      "main": [Function],
       "store": Object {
         "clearActions": [Function],
         "dispatch": [Function],
@@ -78,7 +68,8 @@ ShallowWrapper {
       "key": null,
       "nodeType": "class",
       "props": Object {
-        "move": [Function],
+        "login": [Function],
+        "main": [Function],
         "store": Object {
           "clearActions": [Function],
           "dispatch": [Function],
@@ -121,3 +112,19 @@ ShallowWrapper {
   },
 }
 `;
+
+exports[`Splash actions are dispatched 1`] = `
+Object {
+  "type": "MOVE",
+  "value": "Main",
+}
+`;
+
+exports[`Splash actions are dispatched 2`] = `
+Object {
+  "type": "MOVE",
+  "value": "Login",
+}
+`;
+
+exports[`Splash reducer ignores unknown actions 1`] = `null`;
